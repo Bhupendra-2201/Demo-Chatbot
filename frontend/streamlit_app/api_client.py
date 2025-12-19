@@ -3,10 +3,10 @@ import json
 import logging
 import os
 
-BASE_URL = os.getenv("API_BASE_URL", "https://your-api-id.execute-api.us-east-1.amazonaws.com/prod")
+BASE_URL = os.getenv("API_BASE_URL", "https://h74g6f3fs8.execute-api.us-east-1.amazonaws.com/stage")
 
 class APIClient:
-    def __init__(self, user_id="local-tester@example.com"):
+    def __init__(self, user_id="guest@company.com"):
         self.headers = {
             "Content-Type": "application/json",
             "x-user-id": user_id
@@ -24,7 +24,6 @@ class APIClient:
 
     def list_files(self):
         try:
-            # Change to POST as per index.py handler
             resp = requests.post(f"{BASE_URL}/rag/get-indexed-files-by-user", headers=self.headers)
             if resp.status_code == 200:
                 data = resp.json()
@@ -44,7 +43,6 @@ class APIClient:
             "doc_title": doc_title
         }
         try:
-            # Added trailing slash before ? to match user's working Postman URL
             resp = requests.get(f"{BASE_URL}/rag/get-presigned-url/", params=params, headers=self.headers)
             if resp.status_code == 200:
                 data = resp.json()

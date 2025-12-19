@@ -12,8 +12,8 @@ import os
 st.set_page_config(page_title="DemoBot", layout="wide")
 
 # Configuration from Environment Variables or Secrets
-COGNITO_DOMAIN = os.getenv("COGNITO_DOMAIN", "https://your-cognito-domain.auth.us-east-1.amazoncognito.com")
-CLIENT_ID = os.getenv("COGNITO_CLIENT_ID", "your-client-id")
+COGNITO_DOMAIN = os.getenv("COGNITO_DOMAIN", "https://ap-south-1pgn8ran0j.auth.ap-south-1.amazoncognito.com")
+CLIENT_ID = os.getenv("COGNITO_CLIENT_ID", "1b93ughkik22lj9kva4k2lf0rb")
 REDIRECT_URI = os.getenv("App_REDIRECT_URI", "http://localhost:8501")
 
 # -------------------------------------------------
@@ -71,7 +71,7 @@ if "api" not in st.session_state:
     # We initialize with a placeholder, will update user_id after auth
     st.session_state.api = APIClient("guest")
 else:
-    # Hot-fix for development: Re-init to load new methods if missing
+    # Re-init to load new methods if missing
     if not hasattr(st.session_state.api, "delete_chat"):
          st.session_state.api = APIClient("guest")
          if st.session_state.user_id:
