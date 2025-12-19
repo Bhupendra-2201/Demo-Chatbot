@@ -7,11 +7,14 @@ import jwt
 import urllib.parse
 from api_client import APIClient
 
+import os
+
 st.set_page_config(page_title="DemoBot", layout="wide")
 
-COGNITO_DOMAIN = "https://ap-south-1pgn8ran0j.auth.ap-south-1.amazoncognito.com"
-CLIENT_ID = "1b93ughkik22lj9kva4k2lf0rb"
-REDIRECT_URI = "http://localhost:8501"
+# Configuration from Environment Variables or Secrets
+COGNITO_DOMAIN = os.getenv("COGNITO_DOMAIN", "https://your-cognito-domain.auth.us-east-1.amazoncognito.com")
+CLIENT_ID = os.getenv("COGNITO_CLIENT_ID", "your-client-id")
+REDIRECT_URI = os.getenv("App_REDIRECT_URI", "http://localhost:8501")
 
 # -------------------------------------------------
 # AUTH FUNCTIONS

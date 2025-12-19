@@ -1,8 +1,9 @@
 import requests
 import json
 import logging
+import os
 
-BASE_URL = "https://h74g6f3fs8.execute-api.us-east-1.amazonaws.com/stage"
+BASE_URL = os.getenv("API_BASE_URL", "https://your-api-id.execute-api.us-east-1.amazonaws.com/prod")
 
 class APIClient:
     def __init__(self, user_id="local-tester@example.com"):
