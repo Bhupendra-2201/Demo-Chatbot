@@ -1,0 +1,5 @@
+langchain-aws>=0.1.0
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+pypdf>=3.17.0
+

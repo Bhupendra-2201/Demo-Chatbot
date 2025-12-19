@@ -1,0 +1,10 @@
+# AWS SDK
+boto3>=1.34.0
+
+# Langchain for embeddings and vector operations
+langchain-aws>=0.1.0
+langchain-core>=0.1.0
+langchain-text-splitters>=0.0.1
+
+# PDF processing (for OCR fallback)
+pypdf>=3.17.0

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.local
+
+# IDEs
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+
+# Project Specific Exclusions (Docs & Scripts)
+_extras/
+backend/scripts/
+docs/
+*.log
+CLEANUP_SUMMARY.md
+LLM_CONTEXT.md
+
+# Deployment artifacts (Include main zips, exclude temp/legacy)
+deployment/index_lambda_legacy_artifact.zip
+deployment/backup/
