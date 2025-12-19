@@ -1,32 +1,8 @@
-# AWS SDK
-boto3>=1.34.0
-
-# LangChain for embeddings and text processing
 langchain-aws>=0.1.0
 langchain-core>=0.1.0
 langchain-text-splitters>=0.0.1
-
-# PDF processing
 pypdf>=3.17.0
-
-# Optional: For agent functionality (if using custom agents)
-# Uncomment if you have custom agent modules
-# requests-aws4auth>=1.2.3
-# opensearchpy>=2.4.0  # Only if maintaining OpenSearch fallback
-
-# Python utilities
 python-dotenv>=1.0.0  # For local development
-
-
-
-
-
-
-
-
-
-
-
 python-dotenv
 boto3
 langchain-aws
